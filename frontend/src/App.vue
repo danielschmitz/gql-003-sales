@@ -6,7 +6,7 @@
         <router-link 
           v-if="logged"
           class="navbar-item" 
-          to="/users">Users</router-link>
+          to="/categories">Categories</router-link>
       </div>
     </nav>
     <div class="container">
@@ -33,4 +33,6 @@ export default {
 .container {
   padding: 20px;
 }
+.pointer {cursor: pointer;}
+
 </style>
