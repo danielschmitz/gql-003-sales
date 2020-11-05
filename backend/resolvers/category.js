@@ -23,7 +23,7 @@ module.exports = {
             const result = await db('categories').insert({
                 name,
                 description
-            })
+            }).returning('id')
             const id = result[0]
             console.log("id", id)
             console.log("result",result)
