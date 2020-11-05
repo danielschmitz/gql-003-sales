@@ -6,7 +6,7 @@ module.exports = {
             return await db('categories').where({ id }).first()
         },
         async categories() {
-            return await db('categories')
+            return await db('categories').orderBy('id')
         }
     },
     Mutation: {
