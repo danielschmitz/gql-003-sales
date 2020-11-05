@@ -24,9 +24,9 @@ module.exports = {
                 name,
                 description
             }).returning('id')
+
             const id = result[0]
-            console.log("id", id)
-            console.log("result",result)
+            
             return await db('categories').where({ id }).first()
 
         },

@@ -21,7 +21,8 @@ module.exports = {
               name,
               email,
               password
-          })
+          }).returning('id')
+          
           const id = result[0]
           return await db('users').where({ id }).first()
 
