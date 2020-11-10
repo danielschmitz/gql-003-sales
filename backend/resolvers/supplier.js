@@ -1,4 +1,3 @@
-const { add } = require('lodash')
 const db = require('../database')
 
 module.exports = {
