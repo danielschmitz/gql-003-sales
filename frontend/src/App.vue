@@ -6,6 +6,7 @@
         <router-link v-if="logged" class="navbar-item" to="/categories">Categories</router-link>
         <router-link v-if="logged" class="navbar-item" to="/suppliers">Suppliers</router-link>
         <router-link v-if="logged" class="navbar-item" to="/customers">Customers</router-link>
+        <router-link v-if="logged" class="navbar-item" to="/shippers">Shippers</router-link>
       </div>
     </nav>
     <div class="container">

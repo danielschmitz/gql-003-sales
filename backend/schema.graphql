@@ -2,6 +2,8 @@
 # import Category from "./schemas/category.graphql"
 # import Supplier from "./schemas/supplier.graphql"
 # import Customer from "./schemas/customer.graphql"
+# import Shipper from "./schemas/shipper.graphql"
+
 
 type Query {
     user( id:ID! ): User
@@ -12,7 +14,8 @@ type Query {
     suppliers: [Supplier]
     customer( id:ID! ): Customer
     customers: [Customer]
-
+    shipper( id:ID! ): Shipper
+    shippers: [Shipper]
 }
 
 type Mutation {
@@ -29,4 +32,8 @@ type Mutation {
     createCustomer( customer: CustomerInput! ) : Customer
     editCustomer(id:ID!, customer: CustomerInput!): Customer
     deleteCustomer(id:ID!): Boolean
+
+    createShipper( shipper: ShipperInput! ) : Shipper
+    editShipper(id:ID!, shipper: ShipperInput!): Shipper
+    deleteShipper(id:ID!): Boolean
 }
