@@ -25,6 +25,12 @@ const routes = [
     name: 'Categories',
     meta: { requiresAuth: true },
     component: () => import(/* webpackChunkName: "categories" */ '../views/Categories.vue')
+  },
+  {
+    path: '/suppliers',
+    name: 'Suppliers',
+    meta: { requiresAuth: true },
+    component: () => import(/* webpackChunkName: "suppliers" */ '../views/Suppliers.vue')
   }
 ]
 

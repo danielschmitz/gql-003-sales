@@ -7,6 +7,10 @@
           v-if="logged"
           class="navbar-item" 
           to="/categories">Categories</router-link>
+           <router-link 
+          v-if="logged"
+          class="navbar-item" 
+          to="/suppliers">Suppliers</router-link>
       </div>
     </nav>
     <div class="container">
