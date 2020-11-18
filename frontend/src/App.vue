@@ -3,14 +3,9 @@
     <nav class="navbar is-light">
       <div class="navbar-brand">
         <router-link class="navbar-item" to="/">Home</router-link>
-        <router-link 
-          v-if="logged"
-          class="navbar-item" 
-          to="/categories">Categories</router-link>
-           <router-link 
-          v-if="logged"
-          class="navbar-item" 
-          to="/suppliers">Suppliers</router-link>
+        <router-link v-if="logged" class="navbar-item" to="/categories">Categories</router-link>
+        <router-link v-if="logged" class="navbar-item" to="/suppliers">Suppliers</router-link>
+        <router-link v-if="logged" class="navbar-item" to="/customers">Customers</router-link>
       </div>
     </nav>
     <div class="container">
@@ -19,24 +14,25 @@
   </div>
 </template>
 <script>
-import store from './store'
+import store from "./store";
 export default {
-  data () {
+  data() {
     return {
-      store
-    }
+      store,
+    };
   },
   computed: {
-    logged () {
-      return store.token
-    }
-  }
-}
+    logged() {
+      return store.token;
+    },
+  },
+};
 </script>
 <style>
 .container {
   padding: 20px;
 }
-.pointer {cursor: pointer;}
-
+.pointer {
+  cursor: pointer;
+}
 </style>

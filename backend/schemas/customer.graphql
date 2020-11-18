@@ -1,0 +1,14 @@
+# import Address from "./address.graphql"
+
+type Customer {
+    id: ID
+    contactName: String
+    contactEmail: String
+    address: Address
+}
+
+input CustomerInput {
+    contactName: String!
+    contactEmail: String!
+    address: AddressInput
+}
