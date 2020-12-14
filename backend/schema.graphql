@@ -3,19 +3,28 @@
 # import Supplier from "./schemas/supplier.graphql"
 # import Customer from "./schemas/customer.graphql"
 # import Shipper from "./schemas/shipper.graphql"
+# import Employee from "./schemas/employee.graphql"
 
 
 type Query {
     user( id:ID! ): User
     users: [User]
+    
     category( id:ID! ): Category
     categories: [Category]
+    
     supplier( id:ID! ): Supplier
     suppliers: [Supplier]
+    
     customer( id:ID! ): Customer
     customers: [Customer]
+    
     shipper( id:ID! ): Shipper
     shippers: [Shipper]
+
+    employee( id:ID! ): Employee
+    employees( name: String ): [Employee]
+
 }
 
 type Mutation {
@@ -36,4 +45,10 @@ type Mutation {
     createShipper( shipper: ShipperInput! ) : Shipper
     editShipper(id:ID!, shipper: ShipperInput!): Shipper
     deleteShipper(id:ID!): Boolean
+
+    createEmployee( employee: EmployeeInput! ) : Employee
+    editEmployee(id:ID!, employee: EmployeeInput!): Employee
+    deleteEmployee(id:ID!): Boolean
+
+
 }

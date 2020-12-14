@@ -1,0 +1,27 @@
+# import Address from "./address.graphql"
+scalar Date
+
+type Employee {
+    id: ID
+    firstName: String
+    lastName: String
+    title: String
+    birthDate: Date
+    hireDate: Date
+    notes: String
+    reportsTo: Employee
+    reports_to: ID
+    team: [Employee]
+    address: Address
+}
+
+input EmployeeInput {
+    firstName: String!
+    lastName: String!
+    title: String
+    birthDate: Date!
+    hireDate: Date!
+    notes: String
+    reports_to: ID
+    address: AddressInput
+}
