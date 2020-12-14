@@ -4,6 +4,7 @@
 # import Customer from "./schemas/customer.graphql"
 # import Shipper from "./schemas/shipper.graphql"
 # import Employee from "./schemas/employee.graphql"
+# import Product from "./schemas/product.graphql"
 
 
 type Query {
@@ -24,6 +25,9 @@ type Query {
 
     employee( id:ID! ): Employee
     employees( name: String ): [Employee]
+
+    product( id:ID! ): Product
+    products( discontinued:Boolean ): [Product]
 
 }
 
@@ -49,6 +53,10 @@ type Mutation {
     createEmployee( employee: EmployeeInput! ) : Employee
     editEmployee(id:ID!, employee: EmployeeInput!): Employee
     deleteEmployee(id:ID!): Boolean
+
+    createProduct( product: ProductInput! ) : Product
+    editProduct(id:ID!, product: ProductInput!): Product
+    deleteProduct(id:ID!): Boolean
 
 
 }

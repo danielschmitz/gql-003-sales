@@ -1,0 +1,25 @@
+# import Supplier from "./supplier.graphql"
+# import Category from "./category.graphql"
+
+type Product {
+    id: ID
+    name: String
+    quantityPerUnit: String
+    unitPrice: Float
+    unitsInStock: Int
+    discontinued: Boolean
+    supplier_id: Int
+    category_id: Int
+    supplier: Supplier
+    category: Category
+}
+
+input ProductInput {
+    name: String!
+    quantityPerUnit: String!
+    unitPrice: Float!
+    unitsInStock: Int!
+    discontinued: Boolean
+    supplier_id: Int
+    category_id: Int
+}

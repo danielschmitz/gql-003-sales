@@ -6,6 +6,7 @@ const suppliers = require('./resolvers/supplier')
 const customers = require('./resolvers/customer')
 const shippers = require('./resolvers/shipper')
 const employees = require('./resolvers/employee')
+const products = require('./resolvers/product')
 
 module.exports = lodash.merge(
                         users,
@@ -13,5 +14,6 @@ module.exports = lodash.merge(
                         suppliers,
                         customers,
                         shippers,
-                        employees
+                        employees,
+                        products
                         )
