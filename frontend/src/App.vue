@@ -8,6 +8,7 @@
         <router-link v-if="logged" class="navbar-item" to="/customers">Customers</router-link>
         <router-link v-if="logged" class="navbar-item" to="/shippers">Shippers</router-link>
         <router-link v-if="logged" class="navbar-item" to="/employees">Employees</router-link>
+        <router-link v-if="logged" class="navbar-item" to="/products">Products</router-link>
       </div>
     </nav>
     <div class="container">
