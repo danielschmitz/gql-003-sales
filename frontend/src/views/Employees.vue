@@ -358,7 +358,7 @@
 
 <script>
 import graphql from "../graphql"
-import { dateToInput } from '../utils'
+import { dateToInput, inputToDate } from '../utils'
 
 export default {
   name: "Employees",
@@ -456,6 +456,9 @@ export default {
     },
     async save() {
       this.errorMessage = "";
+
+      const birthDate = inputToDate(this.item.birthDate)
+      const hireDate = inputToDate(this.item.hireDate)
       
       const query =
         this.item.id === null
@@ -465,8 +468,8 @@ export default {
                       firstName: "${this.item.firstName}",
                       lastName: "${this.item.lastName}",
                       title: "${this.item.title}",
-                      birthDate: "${this.item.birthDate}",
-                      hireDate: "${this.item.hireDate}",
+                      birthDate: "${birthDate}",
+                      hireDate: "${hireDate}",
                       reports_to: "${this.item.reports_to}",
                       address: { 
                         street: "${this.item.address.street}",
@@ -486,8 +489,8 @@ export default {
                       firstName: "${this.item.firstName}",
                       lastName: "${this.item.lastName}",
                       title: "${this.item.title}",
-                      birthDate: "${this.item.birthDate}",
-                      hireDate: "${this.item.hireDate}",
+                       birthDate: "${birthDate}",
+                      hireDate: "${hireDate}",
                       address: { 
                         street: "${this.item.address.street}",
                         city: "${this.item.address.city}",
