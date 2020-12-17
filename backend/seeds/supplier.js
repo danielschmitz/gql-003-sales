@@ -1,6 +1,6 @@
 
 exports.seed = async function(knex) {  
-  await knex('addresses').del()
+  
   await knex('suppliers').del()
   const categoryId = await knex('addresses').insert(
       {
