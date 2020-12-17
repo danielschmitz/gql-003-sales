@@ -1,0 +1,13 @@
+# import Product from "./product.graphql"
+
+type OrderProduct {
+    unitPrice: Float
+    quantity: Int
+    product: Product
+}
+
+input OrderProductInput {
+    unitPrice: Float!
+    quantity: Int!
+    product_id: Int!
+}

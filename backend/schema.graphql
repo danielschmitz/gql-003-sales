@@ -5,6 +5,9 @@
 # import Shipper from "./schemas/shipper.graphql"
 # import Employee from "./schemas/employee.graphql"
 # import Product from "./schemas/product.graphql"
+# import Order from "./schemas/order.graphql"
+# import OrderProduct from "./schemas/orderproduct.graphql"
+
 
 
 type Query {
@@ -28,6 +31,11 @@ type Query {
 
     product( id:ID! ): Product
     products( discontinued:Boolean ): [Product]
+
+    order( id:ID! ): Order
+    orders: [Order]
+
+    orderproduct: [OrderProduct]
 
 }
 
@@ -58,5 +66,7 @@ type Mutation {
     editProduct(id:ID!, product: ProductInput!): Product
     deleteProduct(id:ID!): Boolean
 
+    createOrder( order: OrderInput! ) : Int
+    deleteOrder(id:ID!): Boolean
 
 }

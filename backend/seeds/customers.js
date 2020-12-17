@@ -11,8 +11,10 @@ exports.seed = async function(knex) {
         'phone': '111 222 Test'
       }
     ).returning('id')
-
-    return knex('customers').insert(
+    
+    console.log(addressId)
+   
+    return await knex('customers').insert(
       {
         'contactName': 'Contact Test',
         'contactEmail': 'Email Test',

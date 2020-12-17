@@ -1,0 +1,29 @@
+# import Address from "./address.graphql"
+# import Customer from "./customer.graphql"
+# import Employee from "./employee.graphql"
+# import Shipper from "./shipper.graphql"
+# import OrderProduct from "./orderproduct.graphql"
+# import OrderProductInput from "./orderproduct.graphql"
+
+scalar Date
+
+type Order {
+    id: ID
+    orderDate: Date
+    freight: Float
+    customer: Customer
+    employee: Employee
+    shipper: Shipper
+    to: Address
+    items: [OrderProduct]
+}
+
+input OrderInput {
+    orderDate: Date!
+    freight: Float
+    customer_id: Int!
+    employee_id: Int!
+    shipper_id: Int
+    to: AddressInput
+    items: [OrderProductInput]
+}
